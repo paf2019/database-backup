@@ -35,7 +35,7 @@ CREATE TABLE `hibernate_sequence` (
 
 LOCK TABLES `hibernate_sequence` WRITE;
 /*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-INSERT INTO `hibernate_sequence` VALUES (21),(21);
+INSERT INTO `hibernate_sequence` VALUES (22),(22);
 /*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,6 +51,7 @@ CREATE TABLE `item` (
   `item_name` varchar(255) DEFAULT NULL,
   `item_price` double DEFAULT NULL,
   `item_weight` double DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
   PRIMARY KEY (`item_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -61,7 +62,7 @@ CREATE TABLE `item` (
 
 LOCK TABLES `item` WRITE;
 /*!40000 ALTER TABLE `item` DISABLE KEYS */;
-INSERT INTO `item` VALUES (1,'Blue Frock',3500,457.54),(20,'Pink mermaid dress',1500,457.54),(19,'Blue mermaid dress',1500,457.54);
+INSERT INTO `item` VALUES (1,'Blue Frock',3500,457.54,10),(20,'Pink mermaid dress',1500,457.54,20),(19,'Blue mermaid dress',1500,457.54,30),(21,'Personal Planner',1500,457.54,10);
 /*!40000 ALTER TABLE `item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,4 +180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-18 18:04:38
+-- Dump completed on 2019-05-19 14:06:47
